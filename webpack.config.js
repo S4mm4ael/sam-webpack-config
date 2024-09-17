@@ -1,9 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: {
-    app: "./src/index.ts",
-  },
+  entry: "./src/index.ts",
   module: {
     rules: [
       {
@@ -17,10 +15,11 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "[name].js",
-    path: __dirname + "/dist",
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   devServer: {
+    contentBase: path.join(__dirname, "dist"),
     overlay: true,
   },
 };
