@@ -1,5 +1,7 @@
 import "./ts/common";
 
+import Vue from "vue";
+
 import _ from "lodash";
 
 function component() {
