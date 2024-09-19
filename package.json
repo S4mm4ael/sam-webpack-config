@@ -7,13 +7,24 @@
     "dev": "webpack serve --open --mode development",
     "build": "webpack --mode production"
   },
+  "browsersList": [
+    "last 2 versions"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/lodash": "^4.17.7",
+    "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
+    "css-loader": "^5.2.7",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^7.0.6",
+    "mini-css-extract-plugin": "^2.9.1",
     "path": "^0.12.7",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.78.0",
+    "sass-loader": "^16.0.1",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.2",
@@ -22,11 +33,7 @@
     "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
-    "css-loader": "^5.2.7",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^2.9.1",
-    "sass": "^1.78.0",
-    "sass-loader": "^16.0.1",
     "vue": "^3.5.6"
   }
 }
