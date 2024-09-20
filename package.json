@@ -2,7 +2,7 @@
   "name": "sam-webpack-template",
   "version": "1.0.0",
   "description": "A webpack template project for personal usage",
-  "private": true,
+  "main": "./index.ts",
   "scripts": {
     "dev": "webpack serve --open --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js"
