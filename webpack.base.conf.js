@@ -1,8 +1,18 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
+const PATHS = {
+  src: path.resolve(__dirname, "./src"),
+  dist: path.resolve(__dirname, "./dist"),
+  assets: "assets/",
+};
+
 module.exports = {
-  entry: "./src/index.ts",
+  externals: {
+    paths: PATHS,
+  },
+
+  entry: "PATHS.src",
   module: {
     rules: [
       {
@@ -84,8 +94,8 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: `${PATHS.assets}js/[name].js`,
+    path: PATHS.dist,
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -93,7 +103,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: `${PATHS.assets}css/[name].css`,
     }),
   ],
 };

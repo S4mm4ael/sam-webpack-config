@@ -1,9 +1,11 @@
 const webpack = require("webpack");
-const merge = require("webpack-merge");
+const {merge} = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.conf");
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: "development",
+  contentBase: baseWebpackConfig.externals.paths.dist,
+  devtool: "inline-source-map",
   devServer: {
     port: 8081,
     overlay: {
